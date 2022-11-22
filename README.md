@@ -1,5 +1,8 @@
 # PyDaCo
 
+![alt text](https://github.com/myygunduz/PyDaCo/blob/main/image.png?raw=true)
+
+![Python](https://img.shields.io/badge/python-%2314354C.svg?style=for-the-badge&logo=python&logoColor=white) ![Version](https://img.shields.io/static/v1?label=Version&message=0.1.0&style=for-the-badge&labelColor=4B8BBE&color=FFE873&logo=python&logoColor=ffffff) ![LICENSE](https://img.shields.io/static/v1?label=LICENSE&message=MIT&style=for-the-badge)
 ## Description
 
 PyDaCo is a Python package for easy use of dictionaries and lists.
