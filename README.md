@@ -75,3 +75,5 @@ del pdc.name
 
 
 ## License
+
+[MIT](https://github.com/myygunduz/PyDaCo/blob/main/LICENSE)
