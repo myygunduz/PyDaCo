@@ -6,7 +6,7 @@ from typing import overload
 
 
 class pdc:
-    __version__ = '0.1.0'
+    __version__ = '0.1.1'
     __name__    = 'PyDaCO'
 
     @overload
@@ -40,6 +40,8 @@ class pdc:
     def __list(self, __data) -> list:
         return [pdc(value) if isinstance(value, dict) else value for value in __data]
 
+    def __setitem__(self, __name: str, __value: object) -> None: self.__setattr__(__name, __value)
+
     def __setattr__(self, __name: str, __value: object) -> None:
         
         if isinstance(__value, dict):
@@ -50,13 +52,15 @@ class pdc:
             self.__dict__[__name] = __value
             super().__setattr__(__name, __value)
 
+    def __getitem__(self, __name: str) -> object: return str(self.__dict__[__name])
+    
     def __getattr__(self, __name: str) -> object:
         self.__dict__[__name] = pdc()
         return str(self.__dict__[__name])
-    
-    #get data use subscriptable
-    def __getitem__(self, __name: str) -> object:
-        return str(self.__dict__[__name])
+
+    def __delitem__(self, __name: str) -> None: self.__dict__.__delitem__(__name)
+
+    def __delattr__(self, __name: str) -> None: self.__dict__.__delitem__(__name)
 
     def clear(self) -> None:
         self.__dict__.clear()
