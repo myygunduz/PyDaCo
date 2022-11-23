@@ -66,34 +66,3 @@ class pdc:
 
         
 pydaco = pdc()
-
-# class pdcStats:
-#     """will be implemented in the future"""
-#     def __init__(self, data: pdc) -> None:
-#         self.data = data
-#         self.length = 0
-#         self.__len__(self.data)    
-                
-#     def __repr__(self) -> str:
-#         return f"""pdcStats:
-#         data: {self.data}
-#         length: {self.length}
-#         """
-
-#     def __len__(self, data: pdc = None) -> int:
-#         if data is None: return self.length
-
-#         for key, value in data.__dict__.items():
-#             if isinstance(value, pdc):
-#                 print(value)
-#                 self.length += 1
-#                 self.__len__(value)
-#             else:
-#                 if(isinstance(value, list)):
-#                     print(value)
-#                     self.length += len(value)
-#                 else:
-#                     print(value)
-#                     self.length += 1
-            
-#         return self.length
